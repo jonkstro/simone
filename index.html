@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <script type="text/javascript" src="index.js"></script>
+    <title>Teste</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <h1>Quando tu chegar vai ter cuzinho?</h1>
+        <div class="botoes">
+            <a href="" id="yesbtn" onclick="avisarPutaria()">SIM</a>
+            <a href="" id="nobtn">NÃO</a>
+        </div>
+    </div>
+    <script>
+        var noButton = document.getElementById("nobtn");
+
+        function changePosition() {
+            var xPos = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            var yPos = Math.random() * (window.innerHeight - noButton.offsetHeight);
+
+            noButton.style.right = xPos + "px";
+            noButton.style.top = yPos + "px";
+        }
+
+        noButton.addEventListener("click", changePosition);
+        noButton.addEventListener("mouseover", changePosition);
+
+        function avisarPutaria(){
+            alert("Se prepara pra ficar aleijada!!!")
+        }
+    </script>
+</body>
+
+</html>
