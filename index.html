@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Aceita?</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+
+            background-color: red;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        #noButton {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Aceita?</h1>
+        <a class="button" href="https://www.google.com">Sim</a>
+        <button id="noButton" class="button">Não</button>
+    <script>
+        var noButton = document.getElementById("noButton");
+
+        noButton.addEventListener("hover", function() {
+            var xPos = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            var yPos = Math.random() * (window.innerHeight - noButton.offsetHeight);
+
+            noButton.style.left = xPos + "px";
+            noButton.style.top = yPos + "px";
+        });
+    </script>
+</body>
+</html>
